@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparador de Listas</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #c4d2c3;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 4rem;
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Comparador de Listas</h1>
+    <span>Insira os Itens separados por virgula e sem espaço</span>
+
+    <main>
+      <div class="list">
+        <textarea
+          id="sourceList"
+          placeholder="1,2,3,a,b,teste"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <span id="sourceListTotal">Quantidade de Itens: 0</span>
+      </div>
+
+      <button onclick="compare()">Comparar</button>
+      <div class="list">
+        <textarea
+          id="targetList"
+          placeholder="1,3,b,c"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <span id="targetListTotal">Quantidade de Itens: 0</span>
+      </div>
+    </main>
+    <h4>Itens ausentes na segunda Lista:</h4>
+    <span id="result"></span>
+    <script src="index.js"></script>
+  </body>
+</html>
